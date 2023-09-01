@@ -1,4 +1,4 @@
-package roteiro5.parte1;
+package roteiro5.parte3;
 
 public class Loja 
 {
@@ -9,25 +9,13 @@ public class Loja
     {
         this.nomeFantasia = nomeFantasia;
         this.cnpj = cnpj;
+        this.razaoSocial = razaoSocial;
+    }
 
-        /* Dicas para usar o "== " ou usar o equals
-         * Tipos primitivos -> ==
-         * Objetos -> equals
-         * 
-         * O equals testa se a instância daquela objeto é a mesma, ou seja, se é o mesmo objeto
-         * O == testa se os tipos primitivos são iguais ( falta complementar essa explicação)
-         * 
-         * Novo!!!! No Java, quando eu passo um objeto por parâmetro, eu estou passando aquele objeto mesmo e não uma copia dele.
-         * É claro que os tipos primitivos são passados como uma cópia.
-         */
-        if(razaoSocial.equals(""))
-        {
-            this.razaoSocial = nomeFantasia;
-        }
-        else
-        {
-            this.razaoSocial = razaoSocial;
-        }
+    public Loja(String nomeFantasia, String cnpj)
+    {
+        /* Posso chamar o construtor usando o this, é como se eu estivesse chamando a classe.*/
+        this(nomeFantasia, nomeFantasia, cnpj);
     }
     
     public void setNomeFantasia(String nomeFantasia)
@@ -94,13 +82,62 @@ public class Loja
         System.out.println("Valor Faturamento:" + loja.valorFat);
         System.out.println("Área: " + loja.area);
     }
+
+    /* Métodos para comparar faturamentos entre lojas e printá-los */
+    public static void compararFaturamentos(Loja lojaA, Loja lojaB)
+    {
+        if(lojaA.getValorFat() > lojaB.getValorFat())   
+        {
+            System.out.println("Loja de maior faturamento: " + lojaA.nomeFantasia);
+        }
+        else
+        {
+            System.out.println("Loja de maior faturamento: " + lojaB.nomeFantasia);
+        }
+    }
+
+    public void compararFaturamentosNaoStatic(Loja lojaB)
+    {
+        /* Basta dar um this.método/atributo que estou me referindo ao objeto que está rodando essa função */
+        if(this.getValorFat() > lojaB.getValorFat())   
+        {
+            System.out.println("Loja de maior faturamento: " + this.nomeFantasia);
+        }
+        else
+        {
+            System.out.println("Loja de maior faturamento: " + lojaB.nomeFantasia);
+        }
+    }
+
+    /* Métodos que retornam a Loja com maior faturamento */
+    public static Loja compararFaturamentoEntreLojas(Loja lojaA, Loja lojaB)
+    {
+        if(lojaA.getValorFat() > lojaB.getValorFat())
+        {
+            return lojaA;
+        }
+        else
+        {
+            return lojaB;
+        }
+    }
+
+    public Loja compararFaturamentoEntreLojasNaoEstatico(Loja lojaA)
+    {
+        if(this.getValorFat() > lojaA.getValorFat())
+        {
+            return this;
+        }
+        else
+        {
+            return lojaA;
+        }
+    }
     
     private String nomeFantasia;
     private String razaoSocial;
     private String cnpj;
     private double valorFat;
     private double area;
-    private String nomeProprietario; 
-    
-    
+    private String nomeProprietario;        
 }

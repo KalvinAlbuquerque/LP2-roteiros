@@ -17,48 +17,55 @@ public class Principal
 
         /* Verficando se os nomes fantasias da loja 1 e 3 são iguais e printando de acordo 
          * A saída obviamente é "lojas iguais", pois os nomes fantasias são iguais
+         * 
+         * String é um objeto , mas ele é uma exceção da regra do "==" para primitivos. Pois,
+         * o java aceita comparar strings com ==. E obviamente, ele funciona com equals(), pois ele é
+         * um objeto.
         */
-
         System.out.println(" \n****** Teste 1 ********");
-        if ( loja01.getNomeFantasia() == loja03.getNomeFantasia() ){
+        if ( loja01.getNomeFantasia() == loja03.getNomeFantasia() )
+        {
             System.out.println("Lojas Iguais");
         }
-        else {
+        else
+        {
             System.out.println("Lojas Diferentes");
         }
   
         /* Verficando se os nomes fantasias da loja 1 e 3 são iguais e printando de acordo 
          * A saída é "Lojas iguais"
-         * O equals compara o conteúdo dos objetos e não se a referência é a mesma
         */
         System.out.println(" \n****** Teste 2 ********");
-        if ( loja01.getNomeFantasia().equals(loja03.getNomeFantasia())  ){
+        if ( loja01.getNomeFantasia().equals(loja03.getNomeFantasia())  )
+        {
             System.out.println("Lojas Iguais");
         }
-        else {
+        else 
+        {
             System.out.println("Lojas Diferentes");
         }
          
-        /* Verificando se os objetos Loja1 e Loja3 apontam para a mesma referência, ou seja, 
-         * se apontam para o mesmo endereço de memória. Caso o endereço de memória sejam diferentes,
-         * retorna false. Que é o caso, em que a saída é "Lojas diferentes"
-         */
+        /*  A saída é "Lojas diferentes" */
         System.out.println(" \n****** Teste 3 ********");
-        if ( loja01 == loja03  ){
+        if ( loja01 == loja03  )
+        {
             System.out.println("Lojas Iguais");
         }
-        else {
+        else 
+        {
             System.out.println("Lojas Diferentes");
         }
          
         /* Aqui deveria retornar "Lojas iguais", já que o método equals retorna true se o conteúdo dos objetos for iguais.
          * Entretanto está retornando "lojas diferentes" - perguntar ao professor.
+         * Resposta: na realidade, o equals testa se a instância daquele objeto é a mesma. OU seja, se são o mesmo objeto.
          */
         System.out.println(" \n****** Teste 4 ********");
         if ( loja01.equals(loja03)  ){
             System.out.println("Lojas Iguais");
         }
-        else {
+        else
+        {
             System.out.println("Lojas Diferentes");
         }
   

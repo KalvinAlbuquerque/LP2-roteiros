@@ -36,7 +36,7 @@ public class Loja
         return this.razaoSocial;
     }
     
-    public void SetCnpj(String cnpj)
+    public void setCnpj(String cnpj)
     {
         this.cnpj = cnpj;
     }
