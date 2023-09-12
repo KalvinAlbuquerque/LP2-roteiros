@@ -2,8 +2,6 @@ package roteiro8.parte3;
 
 public class Principal
 {
-  
-
     public static void main(String[] args)
     {
         /* Instanciando 3 clientes diferentes para que cada um tenha um veículo diferente */
