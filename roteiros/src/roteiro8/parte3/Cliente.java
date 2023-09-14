@@ -6,11 +6,11 @@ public class Cliente
     /* Builders */
     Cliente(){};    
 
-    public Cliente(String cpf_cnpj, String nome, String endereço, String email, String telefone, Veiculo veiculo) 
+    public Cliente(String cpf_cnpj, String nome, String endereco, String email, String telefone, Veiculo veiculo) 
     {
         this.cpf_cnpj = cpf_cnpj;
         this.nome = nome;
-        this.endereço = endereço;
+        this.endereco = endereco;
         this.email = email;
         this.telefone = telefone;
         this.veiculo = veiculo;
@@ -21,7 +21,7 @@ public class Cliente
     {
         System.out.println("Nome do cliente: " + this.getNome());
         System.out.println("CPF/CNPJ do cliente: " + this.getCpf_cnpj());
-        System.out.println("Endereço do cliente: " + this.getEndereço());
+        System.out.println("endereco do cliente: " + this.getEndereco());
         System.out.println("E-mail do cliente: " + this.getEmail());
         System.out.println("Telefone do cliente: " + this.getTelefone());
         System.out.println("Pedágio do cliente: " + this.getVeiculo().calculoPedagio());
@@ -42,11 +42,11 @@ public class Cliente
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public String getEndereço() {
-        return endereço;
+    public String getEndereco() {
+        return endereco;
     }
-    public void setEndereço(String endereço) {
-        this.endereço = endereço;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
     public String getEmail() {
         return email;
@@ -73,7 +73,7 @@ public class Cliente
     /* ATTRIBUTES */
     private String cpf_cnpj;
     private String nome;
-    private String endereço;
+    private String endereco;
     private String email;
     private String telefone;
     private Veiculo veiculo;
