@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Aluno 
 {
-    Aluno(int matricula, String nome, String curso, int anoIngresso)
+    public Aluno(int matricula, String nome, String curso, int anoIngresso)
     {
         this.matricula = matricula;
         this.nome = nome;
@@ -15,7 +15,7 @@ public class Aluno
     }
 
     
-    Aluno(){};
+    public Aluno(){};
 
     public void adicionarDisciplina(String nomeDaDisciplina)
     {

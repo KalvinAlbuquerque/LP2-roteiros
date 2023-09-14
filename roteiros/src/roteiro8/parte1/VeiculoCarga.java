@@ -3,7 +3,7 @@ package roteiro8.parte1;
 public class VeiculoCarga extends Veiculo
 {
     /* Builders */
-    VeiculoCarga(){};
+    public VeiculoCarga(){};
 
     
     /* Como havia o construtor na classe pai, a classe filha o mesmo método  */

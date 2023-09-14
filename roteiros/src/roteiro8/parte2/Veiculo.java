@@ -7,7 +7,7 @@ public abstract class Veiculo
 {
     /* Builders */
     
-    Veiculo(){};
+    public Veiculo(){};
     
     public Veiculo(String placa, int anoDeFabricacao) {
         this.placa = placa;

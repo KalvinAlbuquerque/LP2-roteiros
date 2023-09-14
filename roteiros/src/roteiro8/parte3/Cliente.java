@@ -4,8 +4,6 @@ public class Cliente
 {
 
     /* Builders */
-    Cliente(){};    
-
     public Cliente(String cpf_cnpj, String nome, String endereco, String email, String telefone, Veiculo veiculo) 
     {
         this.cpf_cnpj = cpf_cnpj;
@@ -15,7 +13,7 @@ public class Cliente
         this.telefone = telefone;
         this.veiculo = veiculo;
     }
-    
+        
     /* GENERAL FUNCTIONS */
     public void printandoInformacoes()
     {

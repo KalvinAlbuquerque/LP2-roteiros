@@ -4,7 +4,7 @@ public class Cliente
 {
 
     /* Builders */
-    Cliente(){};    
+    public Cliente(){};    
 
     public Cliente(String cpf_cnpj, String nome, String endereço, String email, String telefone) 
     {

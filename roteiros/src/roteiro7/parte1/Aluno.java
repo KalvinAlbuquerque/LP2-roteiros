@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Aluno 
 {
-    Aluno(int matricula, String nome, String curso, int anoIngresso, int qtdeDisciplinas)
+    public Aluno(int matricula, String nome, String curso, int anoIngresso, int qtdeDisciplinas)
     {
         this.matricula = matricula;
         this.nome = nome;
@@ -23,7 +23,7 @@ public class Aluno
         }
     }
     
-    Aluno(){};
+    public Aluno(){};
     
     public static Aluno instanciandoNovoAluno()
     {

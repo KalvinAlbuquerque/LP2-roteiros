@@ -3,7 +3,7 @@ package roteiro8.parte2;
 public class VeiculoCarga extends Veiculo
 {
     /* Builders */
-    VeiculoCarga(){};
+    public VeiculoCarga(){};
     
     public VeiculoCarga(String placa, int anoDeFabricacao, int pesoMax) 
     {
