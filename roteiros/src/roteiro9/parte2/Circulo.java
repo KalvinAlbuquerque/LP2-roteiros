@@ -32,7 +32,7 @@ public class Circulo implements FiguraGeometrica
     public double getArea() 
     {
 
-        return this.raio * Math.PI;
+        return (Math.pow(raio, 2) * Math.PI);
     }
 
     @Override
